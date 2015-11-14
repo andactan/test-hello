@@ -1,0 +1,8 @@
+application\repository\UserRepository.class
+application\core\Follow.class
+application\miscalleneous\Result.class
+application\core\User.class
+application\controller\FollowController.class
+application\repository\FollowRepository.class
+application\Application.class
+application\controller\UserController.class

@@ -35,19 +35,14 @@ public class FollowController {
             return repo.findByFollowerId(followerId);
         return null;
 
-    }
+    }*/
     /*
     @RequestMapping(method = RequestMethod.GET, value = "/follows")
     public List<Follow> findByFollower(@RequestParam("follower") Integer followerId){
         return repo.findByFollowerId(followerId);
     }*/
-   // @RequestMapping(method = RequestMethod.GET, value = "/followers/{id}")
-   // public List<Integer> getFollowers(@PathVariable("id") int followedId){
-   //     return repo.getFollowers(followedId);
-   // }
-
-    @RequestMapping(method = RequestMethod.GET, value = "followers/{id}")
-    public List<Integer> getFollowers(@PathVariable("id") int id){
-        return repo.getFollowers(id);
+    @RequestMapping(method = RequestMethod.GET, value = "/followers/{id}")
+    public List<Integer> getFollowers(@PathVariable("id") int followedId){
+        return repo.getFollowers(followedId);
     }
 }

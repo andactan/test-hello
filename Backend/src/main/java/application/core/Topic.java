@@ -9,63 +9,38 @@ public class Topic {
 
     @Id
     @GeneratedValue
-    int id;
+    private int id;
 
     @Column(name = "title")
     private String title;
 
-    @Column(name = "topic_owner")
-    private int topicOwner;
-
-    // Change generic type to Post!!
     @Transient
-    private ArrayList<String> postList = new ArrayList<String>();
+    private ArrayList<Integer> tags;
 
-    // Change generic type to Tag!!
+
+    /*
     @Transient
-    private ArrayList<String> tagList = new ArrayList<String>();
+    private ArrayList<Post> posts;
+    */
 
-    // Change generic type to Relation
+    /*
     @Transient
-    private ArrayList<String> relations = new ArrayList<String>();
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private ArrayList<Integer> topicRelations;
+    */
 
     public int getId() {
         return id;
     }
 
-    public void setTopicOwner(int topicOwner) {
-        this.topicOwner = topicOwner;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getTopicOwner() {
-        return topicOwner;
+    public String getTitle() {
+        return title;
     }
 
-    public void setPostList(ArrayList<String> postList) {
-        this.postList = postList;
-    }
-
-    public ArrayList<String> getPostList() {
-        return postList;
-    }
-
-    public void setTagList(ArrayList<String> tagList) {
-        this.tagList = tagList;
-    }
-
-    public ArrayList<String> getTagList() {
-        return tagList;
-    }
-
-    public void setRelations(ArrayList<String> relations) {
-        this.relations = relations;
-    }
-
-    public ArrayList<String> getRelations() {
-        return relations;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
